@@ -15,3 +15,6 @@ which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ../Brewfile -
 echo 'bundle install'
 gem install bundler
 bundle install --gemfile ../Gemfile
+
+echo 'xcversion update'
+xcversion update
