@@ -18,4 +18,5 @@ brew "docker"
 brew "jq"
 brew "ffmpeg"
 
-mas "Slack", id: 803453959
+mas "slack", id: 803453959
+mas "todoist", id: 585829637
