@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo 'install xcode'
-xcode-select --install
-
 echo 'install rosetta'
 sudo softwareupdate --install-rosetta --agree-to-licensesudo softwareupdate --install-rosetta --agree-to-license
 
@@ -14,3 +11,7 @@ which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew doctor && brew update --ver
 
 echo 'install app from brewfile'
 which /opt/homebrew/bin/brew >/dev/null 2>&1 && brew bundle --file ../Brewfile --verbose
+
+echo 'bundle install'
+gem install bundler
+bundle install --gemfile ../Gemfile
