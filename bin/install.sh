@@ -21,3 +21,10 @@ bundle install --gemfile ../Gemfile
 
 echo 'xcversion update'
 xcversion update
+
+echo 'install oh-my-zsh'
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+mkdir work && cd work
+git clone https://github.com/dracula/zsh.git
+ln -s $DRACULA_THEME/dracula.zsh-theme $OH_MY_ZSH/themes/dracula.zsh-theme
+cd ..
