@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://macos-defaults.com/
+
 if [ "$(uname)" != "Darwin" ] ; then
 	echo "Not macOS!"
 	exit 1
