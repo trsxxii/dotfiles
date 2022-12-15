@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles=(../.zshrc)
+dotfiles=(../config/.zshrc)
 for file in "${dotfiles[@]}"; do
   ln -svf $file ~/
 done 
