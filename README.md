@@ -9,7 +9,7 @@ $ git clone https://github.com/trsxxii/dotfiles.git
 2. Setup secret.zshrc
 ```
 $ cd dotfiles
-$ vi secret.zshrc
+$ vi config/secret.zshrc
 ```
 
 3. Exec
