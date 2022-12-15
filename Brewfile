@@ -24,6 +24,7 @@ cask "slack"
 cask "spotify"
 cask "todoist"
 cask "visual-studio-code"
+cask "warp"
 cask "zoom"
 
 brew "docker"
