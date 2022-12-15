@@ -2,61 +2,65 @@
 
 # https://macos-defaults.com/
 
-if [ "$(uname)" != "Darwin" ] ; then
-	echo "Not macOS!"
-	exit 1
-fi
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+defaults write -g NSInitialToolTipDelay -integer 0
+defaults write -g NSWindowResizeTime 0.1
+defaults write -g AppleShowScrollBars -string "Always"
+defaults write -g com.apple.springing.delay -float 0
+defaults write -g com.apple.springing.enabled -bool true
+defaults write -g KeyRepeat -int 1
+defaults write -g InitialKeyRepeat -int 10
+defaults write -g NSWindowResizeTime -float 0.001
+defaults write -g AppleShowAllExtensions -bool true
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+defaults write -g NSNavPanelExpandedStateForSaveMode -boolean true
+defaults write -g PMPrintingExpandedStateForPrint -boolean true
+defaults write -g com.apple.mouse.scaling 5
 
-# ====================
-#
-# Base
-#
-# ====================
 
-# Disable auto-capitalization
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+defaults write com.apple.dashboard mcx-disabled -bool true
+defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# ====================
-#
 # Dock
-#
-# ====================
+defaults write com.apple.dock "tilesize" -int "48"
+defaults write com.apple.dock "autohide" -bool "true"
+defaults write com.apple.dock "autohide-time-modifier" -float "0.25"
+defaults write com.apple.dock "autohide-delay" -float "0"
+defaults write com.apple.dock "mru-spaces" -bool "false"
+defaults write com.apple.dock workspaces-edge-delay -float 0.2
+defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock use-new-list-stack -boolean true
+defaults write com.apple.dock mouse-over-hilite-stack -boolean true
+defaults write com.apple.dock no-bouncing -boolean true
+defaults write com.apple.dock magnification -bool true
 
-# Disable animation at application launch
-defaults write com.apple.dock launchanim -bool false
+# Screenshots
+defaults write com.apple.screencapture "disable-shadow" -bool "true"
+defaults write com.apple.screencapture "location" -string "~/Screenshots"
+defaults write com.apple.screencapture "show-thumbnail" -bool "false"
 
-# ====================
-#
 # Finder
-#
-# ====================
+defaults write com.apple.finder "AppleShowAllFiles" -bool "true"
+defaults write com.apple.finder "ShowPathbar" -bool "true"
+defaults write com.apple.finder "ShowStatusBar" -bool "true"
+defaults write com.apple.finder "FXPreferredViewStyle" -string "clmv"
+defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
+defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
+defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "false"
+defaults write com.apple.finder QLEnableTextSelection -bool true
+defaults write com.apple.finder CreateDesktop -boolean false
 
-# Disable animation
-defaults write com.apple.finder DisableAllAnimations -bool true
+# Menu Bar
+defaults write com.apple.menuextra.clock "FlashDateSeparators" -bool "true"
+defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+defaults write com.apple.menuextra.battery "ShowPercent" -string "YES"
 
-# Show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+# Xcode
+defaults write com.apple.dt.Xcode "ShowBuildOperationDuration" -bool "true"
 
-# Show files with all extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Display the status bar
-defaults write com.apple.finder ShowStatusBar -bool true
-
-# Display the path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
-# ====================
-#
-# SystemUIServer
-#
-# ====================
-
-# Display date, day, and time in the menu bar
-defaults write com.apple.menuextra.clock DateFormat -string 'yyyy/MM/dd(EEE) HH:mm:ss'
-
-# Display battery level in the menu bar
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+# Simulator
+defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "~/Screenshots"
 
 for app in "Dock" \
 	"Finder" \
