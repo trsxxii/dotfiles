@@ -6,4 +6,4 @@ for file in "${dotfiles[@]}"; do
 done 
 
 ln -svf ../config/karabiner.json ~/.config/karabiner/
-ln -svf ../ignore ~/.config/git/
+ln -svf ../config/ignore ~/.config/git/
