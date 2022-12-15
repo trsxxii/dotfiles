@@ -6,10 +6,10 @@ $ xcode-select --install
 $ git clone https://github.com/trsxxii/dotfiles.git
 ```
 
-2. Setup secret.zshrc
+2. Setup .secret.zshrc
 ```
 $ cd dotfiles
-$ vi config/secret.zshrc
+$ vi config/.secret.zshrc
 ```
 
 3. Exec
