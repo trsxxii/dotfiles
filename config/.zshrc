@@ -1,29 +1,22 @@
 export LANG=ja_JP.UTF-8
 
-setopt auto_pushd
-setopt pushd_ignore_dups
-setopt no_flow_control
-setopt extended_glob
-setopt auto_cd
-setopt auto_pushd
-setopt pushd_ignore_dups
-setopt no_beep
-setopt auto_param_keys
-setopt print_eight_bit
-setopt print_exit_value
-setopt mark_dirs
-setopt correct
-setopt correct_all
-setopt no_clobber
-setopt noautoremoveslash
-setopt list_packed
-setopt magic_equal_subst
-setopt histignorealldups
-setopt share_history
-setopt hist_ignore_all_dups
-setopt hist_reduce_blanks
-setopt hist_verify
-setopt inc_append_history
+setopt auto_cd                # cd なしでもディレクトリ移動
+setopt auto_list              # 補完候補が複数あるとき、自動でメニューをリストアップする
+setopt complete_in_word       # wordの途中でも補完
+setopt no_beep                # beep音を鳴らさない
+setopt print_eight_bit        # 日本語を正しく表示
+setopt mark_dirs              # ファイル名展開でディレクトリにマッチすると / をつける
+setopt correct                # コマンド名のスペル修正を試みる
+setopt list_packed            # 補完候補を詰めて表示
+setopt magic_equal_subst      # = 以降も補完
+setopt hist_ignore_all_dups   # history内の重複を消す
+setopt hist_ignore_space      # スペースから始まるものはヒストリに追加しない
+setopt hist_reduce_blanks     # history記録時に余分なスペースを削除する
+setopt rm_star_silent         # "rm * " を実行する前に確認
+
+HISTFILE=$HOME/.zsh_history   # historyを保存するファイル名
+HISTSIZE=10000                # メモリに展開する履歴数
+SAVEHIST=30000                # HISTFILEに保存する履歴数
 
 alias h='fc -lt '%F %T' 1'
 alias ll='ls -l --color=auto'
