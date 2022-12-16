@@ -22,9 +22,7 @@ xcversion install [YOUR VERSION]
 
 # Manual settings
 
-* Mos.app
-    * Check [Launch on Login]
 * Alfred.app
     * Check my mail "Your Alfred Powerpack License"
-* Setting color theme
+* Setting preference and color theme for each app 
     * https://draculatheme.com/
