@@ -14,7 +14,7 @@ setopt hist_ignore_space      # スペースから始まるものはヒストリ
 setopt hist_reduce_blanks     # history記録時に余分なスペースを削除する
 setopt rm_star_silent         # "rm * " を実行する前に確認
 
-HISTFILE=~/.zsh_history   # historyを保存するファイル名
+HISTFILE=~/.zsh_history       # historyを保存するファイル名
 HISTSIZE=10000                # メモリに展開する履歴数
 SAVEHIST=30000                # HISTFILEに保存する履歴数
 
