@@ -1,33 +1,23 @@
 # dotfiles
 
-1. Setup for using git
+1. Open Terminal.app && Install without git
 ```
-$ xcode-select --install
-$ git clone https://github.com/trsxxii/dotfiles.git
+bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/bin/install.sh )"
 ```
 
 2. Setup .secret.zshrc
 ```
-$ cd dotfiles
-$ vi config/.secret.zshrc
+vi config/.secret.zshrc
 ```
 
-3. Exec
+3. Close Terminal.app && Open Warp.app && Install Xcode with specific version
 ```
-$ make all
-```
-
-4. Install Xcode with version
-```
-$ xcversion list
-$ xcversion install XX.X
+xcversion list
+xcversion install [YOUR VERSION]
 ```
 
 # Alfred license
 Mail subject is "Your Alfred Powerpack License"
-
-# Setup Mos
-see config/mos1.png, mos2.png
 
 # Dracula Theme
 https://draculatheme.com/
