@@ -33,7 +33,7 @@ alias rm='rm -i'
 alias mkdir='mkdir -p'
 alias g='gitui'
 
-SECRET_FILE=~/secret.zshrc
+SECRET_FILE=.secret.zshrc
 if [[ -f $SECRET_FILE ]]; then
   source $SECRET_FILE
 fi
