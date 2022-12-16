@@ -62,6 +62,13 @@ defaults write com.apple.dt.Xcode "ShowBuildOperationDuration" -bool "true"
 # Simulator
 defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "~/Screenshots"
 
+# Mos
+defaults write com.caldis.Mos smooth -boolean true
+defaults write com.caldis.Mos reverse -boolean true
+defaults write com.caldis.Mos toggle -int 56
+defaults write com.caldis.Mos step -string "33.00"
+defaults write com.caldis.Mos speed -string "3.30"
+defaults write com.caldis.Mos duration -string "3.30"
 
 apps=(
 "Dock"
