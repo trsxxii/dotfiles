@@ -10,7 +10,9 @@ bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/b
 vi config/.secret.zshrc
 ```
 
-3. Close Terminal.app && Open Warp.app && Install Xcode with specific version
+3. Close Terminal.app && Open Warp.app
+
+4. Install Xcode with specific version
 ```
 xcversion list
 xcversion install [YOUR VERSION]
