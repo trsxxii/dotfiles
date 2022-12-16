@@ -18,8 +18,13 @@ xcversion list
 xcversion install [YOUR VERSION]
 ```
 
-# Alfred license
-Mail subject is "Your Alfred Powerpack License"
+---
 
-# Dracula Theme
-https://draculatheme.com/
+# Manual settings
+
+* Mos.app
+    * Check [Launch on Login]
+* Alfred.app
+    * Check my mail "Your Alfred Powerpack License"
+* Setting color theme
+    * https://draculatheme.com/
