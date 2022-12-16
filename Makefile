@@ -1,11 +1,17 @@
-all: install symlink defaults
+all: brew gem defaults symlink other
 
-install:
-  bin/install.sh
+brew:
+  bin/brew.sh
+
+gem:
+  bin/gem.sh
+
+defaults:
+  bin/defaults.sh
 
 symlink:
   bin/simlink.sh
   
-defaults:
-  bin/defaults.sh
+other:
+  bin/other.sh
   
