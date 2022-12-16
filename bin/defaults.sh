@@ -73,6 +73,9 @@ apps=(
 "Dock"
 "Finder"
 "SystemUIServer"
+"Mos"
+"Xcode"
+"Simulator"
 )
 
 for app in "${apps[@]}"; do
