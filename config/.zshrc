@@ -26,6 +26,10 @@ alias rm='rm -i'
 alias mkdir='mkdir -p'
 alias g='gitui'
 
+function gif() {
+  command ffmpeg -hide_banner -i $1 -r 6 $1.gif
+}
+
 SECRET_FILE=~/.secret.zshrc
 if [[ -f $SECRET_FILE ]]; then
   source $SECRET_FILE
