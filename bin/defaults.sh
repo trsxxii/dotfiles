@@ -1,21 +1,26 @@
 #!/bin/bash
 
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+# ファイルを開くときのアニメーションを無効化
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
+# ツールチップ表示までのタイムラグなし
 defaults write -g NSInitialToolTipDelay -int 0
-defaults write -g NSWindowResizeTime -float "0.1"
+# ダイアログ表示やウィンドウリサイズ速度を高速化する
+defaults write -g NSWindowResizeTime -float "0.01"
+# スクロールバーを常時表示する
 defaults write -g AppleShowScrollBars -string "Always"
-defaults write -g com.apple.springing.delay -float "0" 
-defaults write -g com.apple.springing.enabled -bool true
+# キーリピートまでの時間を最短にする
 defaults write -g KeyRepeat -int 1
+# キーリピート開始までの時間を短くする
 defaults write -g InitialKeyRepeat -int 10
-defaults write -g NSWindowResizeTime -float "0.001"
+# 全ての拡張子のファイルを表示する
 defaults write -g AppleShowAllExtensions -bool true
-defaults write -g NSToolbarTitleViewRolloverDelay -float "0"
+# ファイル保存時に常に詳細表示する
 defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+# 印刷時に常に詳細表示する
 defaults write -g PMPrintingExpandedStateForPrint -bool true
-
+# ダッシュボードの削除
 defaults write com.apple.dashboard mcx-disabled -bool true
+# ダウンロードアプリの警告を無効化する
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Dock
@@ -59,7 +64,7 @@ defaults write com.apple.dt.Xcode IDEShowPrebuildLogs -bool true
 defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool true
 
 # Simulator
-defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "~/Screenshots"
+defaults write com.apple.iphonesimulator ScreenShotSaveLocation -string "~/Screenshots"
 
 # Mos
 defaults write com.caldis.Mos smooth -bool true
