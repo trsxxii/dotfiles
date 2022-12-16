@@ -62,8 +62,13 @@ defaults write com.apple.dt.Xcode "ShowBuildOperationDuration" -bool "true"
 # Simulator
 defaults write com.apple.iphonesimulator "ScreenShotSaveLocation" -string "~/Screenshots"
 
-for app in "Dock" \
-	"Finder" \
-	"SystemUIServer"; do
-	killall "${app}" &> /dev/null
+
+apps=(
+"Dock"
+"Finder"
+"SystemUIServer"
+)
+
+for app in "${apps[@]}"; do
+  killall "${app}" &> /dev/null
 done
