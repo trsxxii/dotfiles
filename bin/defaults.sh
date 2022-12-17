@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "global settings"
 # ファイルを開くときのアニメーションを無効化
 defaults write -g NSAutomaticWindowAnimationsEnabled -bool false
 # ツールチップ表示までのタイムラグなし
@@ -23,6 +24,7 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 # ダウンロードアプリの警告を無効化する
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
+echo "dock settings"
 # Dock
 defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock autohide -bool true
@@ -36,11 +38,13 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 defaults write com.apple.dock no-bouncing -bool true
 defaults write com.apple.dock magnification -bool true
 
+echo "screenshot settings"
 # Screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
 defaults write com.apple.screencapture location -string "~/Screenshots"
 defaults write com.apple.screencapture show-thumbnail -bool false
 
+echo "finder settings"
 # Finder
 defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write com.apple.finder ShowPathbar -bool true
@@ -52,20 +56,24 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder QLEnableTextSelection -bool true
 defaults write com.apple.finder CreateDesktop -bool false
 
+echo "menu bar settings"
 # Menu Bar
 defaults write com.apple.menuextra.clock FlashDateSeparators -bool true
 defaults write com.apple.menuextra.clock DateFormat -string "\"EEE d MMM HH:mm:ss\""
 defaults write com.apple.menuextra.battery ShowPercent -bool true
 
+echo "xcode settings"
 # Xcode
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool true
 defaults write com.apple.dt.Xcode IDEIndexShowLog -bool true
 defaults write com.apple.dt.Xcode IDEShowPrebuildLogs -bool true
 defaults write com.apple.dt.Xcode IDEDisableStateRestoration -bool true
 
+echo "simulator settings"
 # Simulator
 defaults write com.apple.iphonesimulator ScreenShotSaveLocation -string "~/Screenshots"
 
+echo "mos settings"
 # Mos
 defaults write com.caldis.Mos smooth -bool true
 defaults write com.caldis.Mos reverse -bool true
@@ -83,6 +91,7 @@ apps=(
 "Simulator"
 )
 
+echo "kill apps"
 for app in "${apps[@]}"; do
   killall "${app}" &> /dev/null
 done
