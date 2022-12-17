@@ -14,6 +14,7 @@ vi config/.secret.zshrc
 
 4. Install Xcode with specific version
 ```
+xcversion update
 xcversion list
 xcversion install [YOUR VERSION]
 ```
