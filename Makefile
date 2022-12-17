@@ -10,7 +10,7 @@ defaults:
 	bin/defaults.sh
 
 symlink:
-	bin/simlink.sh
+	bin/symlink.sh
   
 other:
 	bin/other.sh
