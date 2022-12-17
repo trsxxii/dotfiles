@@ -1,0 +1,9 @@
+name: make all test
+on: [push]
+jobs:
+  makeall:
+    runs-on: macos-latest
+    steps:
+      - name: make all
+        run: make all
+        uses: actions/checkout@v2
