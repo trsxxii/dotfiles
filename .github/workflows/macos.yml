@@ -4,6 +4,7 @@ jobs:
   makeall:
     runs-on: macos-latest
     steps:
+      - name: checkout
+        uses: actions/checkout@v2
       - name: make
-        run: make brew
-      - uses: actions/checkout@v2
+        run: make all
