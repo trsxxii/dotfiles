@@ -1,9 +1,9 @@
-name: make all test
+name: test
 on: [push]
 jobs:
   makeall:
     runs-on: macos-latest
     steps:
-      - name: make all
-        run: make
+      - name: make
+        run: make brew
       - uses: actions/checkout@v2
