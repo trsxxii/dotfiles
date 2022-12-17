@@ -7,4 +7,4 @@ echo 'brew doctor, update, upgrade'
 brew doctor && brew update --verbose && brew upgrade --verbose
 
 echo 'install app from brewfile'
-brew bundle --file ../config/Brewfile --verbose
+brew bundle --file ./config/Brewfile --verbose
