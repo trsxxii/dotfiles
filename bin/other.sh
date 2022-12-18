@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd 'dirname $0'
+cd $(dirname $0)
 
 if [[ "$(uname -m)" == arm64 ]]; then
   echo 'install rosetta'
