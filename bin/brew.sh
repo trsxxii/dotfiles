@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd 'dirname $0'
+cd $(dirname $0)
 
 echo 'install homebrew'
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
