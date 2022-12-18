@@ -23,7 +23,7 @@ xcversion install [YOUR VERSION]
 
 # Manual settings
 
-* Alfred.app
-    * Check my mail "Your Alfred Powerpack License"
+* Raycast.app
+	* rayconfig can set a password, but don't add it to git as it may contain sensitive information
 * Setting preference and color theme for each app 
-    * https://draculatheme.com/
+	* https://draculatheme.com/
