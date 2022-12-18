@@ -2,7 +2,7 @@
 
 1. Open Terminal.app && Install without git
 ```
-bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/bin/install.sh )"
+cd ~/ && bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/bin/install.sh )"
 ```
 
 2. Setup .secret.zshrc
