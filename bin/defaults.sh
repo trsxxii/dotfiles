@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd 'dirname $0'
+cd $(dirname $0)
 
 echo "global settings"
 # ファイルを開くときのアニメーションを無効化
