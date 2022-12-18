@@ -26,11 +26,20 @@ alias rm='rm -i'
 alias mkdir='mkdir -p'
 alias g='gitui'
 
+# ffmpegでgifを作るcommandを簡略化
 function gif() {
-  command ffmpeg -hide_banner -i $1 -r 6 $1.gif
+  command ffmpeg -hide_banner -i $1 -r 24 $1.gif
 }
 
+# secretファイルを読み込む
 SECRET_FILE=~/.secret.zshrc
 if [[ -f $SECRET_FILE ]]; then
   source $SECRET_FILE
+fi
+
+# dotfilesのgit更新漏れを表示
+dotfiles_home="~/dotfiles"
+if test -n "$(git -C ${dotfiles_home} status --porcelain)" ||
+   ! git -C ${dotfiles_home} diff --exit-code --stat --cached origin/main > /dev/null ; then
+  echo -e "\U1F363 \e[33mThe dotfiles have been changed.\e[m \U1F363"
 fi
