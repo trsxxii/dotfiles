@@ -1,8 +1,10 @@
 #!/bin/bash
 
+cd 'dirname $0'
+
 dotfiles=(
-./config/.zshrc
-./config/.secret.zshrc
+	../config/.zshrc
+	../config/.secret.zshrc
 )
 
 echo "symbolic link"
@@ -11,5 +13,5 @@ for file in "${dotfiles[@]}"; do
 done 
 
 mkdir -p ~/.config/{karabiner,git}
-ln -svf ./config/karabiner.json ~/.config/karabiner/
-ln -svf ./config/ignore ~/.config/git/
+ln -svf ../config/karabiner.json ~/.config/karabiner/
+ln -svf ../config/ignore ~/.config/git/
