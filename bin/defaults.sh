@@ -14,7 +14,7 @@ defaults write -g AppleShowScrollBars -string "Always"
 # キーリピートまでの時間を最短にする
 defaults write -g KeyRepeat -int 1
 # キーリピート開始までの時間を短くする
-defaults write -g InitialKeyRepeat -int 10
+defaults write -g InitialKeyRepeat -int 20
 # 全ての拡張子のファイルを表示する
 defaults write -g AppleShowAllExtensions -bool true
 # ファイル保存時に常に詳細表示する
