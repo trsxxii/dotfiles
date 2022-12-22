@@ -95,7 +95,7 @@ if [ ! $CI ]; then
 	)
 
 	echo "kill apps"
-	for app in "${apps[@]}"; do
-		killall "${app}" &> /dev/null
-	done
+# 	for app in "${apps[@]}"; do
+# 		killall "${app}" &> /dev/null
+# 	done
 fi
