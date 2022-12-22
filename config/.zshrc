@@ -1,6 +1,8 @@
 export LANG=ja_JP.UTF-8
 export PATH=/opt/homebrew/bin/:$PATH
 
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
+
 setopt auto_cd                # cd なしでもディレクトリ移動
 setopt auto_list              # 補完候補が複数あるとき、自動でメニューをリストアップする
 setopt complete_in_word       # wordの途中でも補完
