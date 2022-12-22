@@ -3,7 +3,6 @@
 cd $(dirname $0)
 
 echo 'setup rbenv'
-export PATH=/opt/homebrew/bin/:$PATH
 rbenv init
 rbenv install '3.1.3'
 rbenv local '3.1.3'
