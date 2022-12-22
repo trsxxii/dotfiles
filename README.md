@@ -1,7 +1,8 @@
 # dotfiles
 
-1. Install CommandLineTools
+1. Change shell and Install CommandLineTools
 ```
+chsh -s /bin/zsh
 xcode-select --install
 ```
 
