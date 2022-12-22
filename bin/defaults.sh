@@ -88,14 +88,14 @@ if [ ! $CI ]; then
 	apps=(
 	"Dock"
 	"Finder"
-	"SystemUIServer"
-	"Mos"
-	"Xcode"
-	"Simulator"
+# 	"SystemUIServer"
+# 	"Mos"
+# 	"Xcode"
+# 	"Simulator"
 	)
 
 	echo "kill apps"
-# 	for app in "${apps[@]}"; do
-# 		killall "${app}" &> /dev/null
-# 	done
+	for app in "${apps[@]}"; do
+		killall "${app}" &> /dev/null
+	done
 fi
