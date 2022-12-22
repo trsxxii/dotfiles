@@ -21,7 +21,7 @@ cd ~/dotfiles && make all
 (example)
 export GITHUB_ACCESS_TOKEN=ghp_XXX
 
-alias proj='path/to/proj'
+alias proj='cd path/to/proj'
 
 git config --global user.name ""
 git config --global user.email ""
