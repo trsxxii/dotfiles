@@ -42,8 +42,7 @@ if [[ -f $SECRET_FILE ]]; then
 fi
 
 # dotfilesのgit更新漏れを表示
-dotfiles_home="~/dotfiles"
-if test -n '$(git -C "${dotfiles_home}" status --porcelain)' ||
-   ! git -C "${dotfiles_home}" diff --exit-code --stat --cached origin/main > /dev/null ; then
+if test -n '$(git -C ~/dotfiles status --porcelain)' ||
+   ! git -C ~/dotfiles diff --exit-code --stat --cached origin/main > /dev/null ; then
   echo -e "\U1F363 \e[33mMy dotfiles have been changed.\e[m \U1F363"
 fi
