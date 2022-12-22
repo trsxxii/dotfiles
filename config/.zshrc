@@ -1,4 +1,5 @@
 export LANG=ja_JP.UTF-8
+export PATH=/opt/homebrew/bin/:$PATH
 
 setopt auto_cd                # cd なしでもディレクトリ移動
 setopt auto_list              # 補完候補が複数あるとき、自動でメニューをリストアップする
