@@ -16,7 +16,19 @@ git clone https://github.com/trsxxii/dotfiles.git
 cd ~/dotfiles && make all
 ```
 
-4. Install Xcode with specific version
+4. Create .secret.zshrc and change it
+```
+(example)
+export GITHUB_ACCESS_TOKEN=ghp_XXX
+
+alias proj='path/to/proj'
+
+git config --global user.name ""
+git config --global user.email ""
+git config --global credential.helper osxkeychain
+```
+
+5. Install Xcode with specific version
 ```
 rbenv exec xcversion update
 rbenv exec xcversion list
