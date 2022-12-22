@@ -1,5 +1,8 @@
-all: brew gem defaults symlink other
+all: symlink brew gem defaults other
 
+symlink:
+	bin/symlink.sh
+	
 brew:
 	bin/brew.sh
 
@@ -8,9 +11,6 @@ gem:
 
 defaults:
 	bin/defaults.sh
-
-symlink:
-	bin/symlink.sh
   
 other:
 	bin/other.sh
