@@ -6,19 +6,17 @@ chsh -s /bin/zsh
 xcode-select --install
 ```
 
-2. Install without git
+2. download dotfiles
 ```
 cd ~/ && /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/bin/install.sh )"
 ```
 
-3. Setup .secret.zshrc
+3. Restart Terminal.app && Install dotfiles
 ```
-vi config/.secret.zshrc
+cd ~/dotfiles && make all
 ```
 
-4. Close Terminal.app && Open Warp.app
-
-5. Install Xcode with specific version
+4. Install Xcode with specific version
 ```
 rbenv exec xcversion update
 rbenv exec xcversion list
