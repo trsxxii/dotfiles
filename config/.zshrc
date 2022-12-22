@@ -23,7 +23,7 @@ HISTSIZE=10000                # メモリに展開する履歴数
 SAVEHIST=30000                # HISTFILEに保存する履歴数
 
 alias h='fc -lt '%F %T' 1'
-alias ll='ls -l --color=auto'
+alias ll='ls -al --color=auto'
 alias so='source'
 alias cp='cp -i'
 alias rm='rm -i'
