@@ -1,14 +1,14 @@
 # dotfiles
 
-1. Change shell and Install CommandLineTools
+1. Change shell and Install CommandLineTools and Restart Terminal.app
 ```
 chsh -s /bin/zsh
 xcode-select --install
 ```
 
-2. Open Terminal.app && Install without git
+2. Install without git
 ```
-cd ~/ && bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/bin/install.sh )"
+cd ~/ && /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/bin/install.sh )"
 ```
 
 3. Setup .secret.zshrc
@@ -24,6 +24,8 @@ xcversion update
 xcversion list
 xcversion install [YOUR VERSION]
 ```
+
+6. Restart Mac and Finished
 
 ---
 
