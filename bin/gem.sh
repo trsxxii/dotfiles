@@ -1,9 +1,9 @@
 #!/bin/bash
 
 cd $(dirname $0)
-source ~/.zshrc
 
 echo 'setup rbenv'
+rbenv init
 rbenv install '3.1.3'
 rbenv local '3.1.3'
 
