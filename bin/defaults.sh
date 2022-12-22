@@ -83,19 +83,3 @@ defaults write com.caldis.Mos toggle -int 56
 defaults write com.caldis.Mos step -string "33.00"
 defaults write com.caldis.Mos speed -string "3.30"
 defaults write com.caldis.Mos duration -string "3.30"
-
-if [ ! $CI ]; then
-	apps=(
-	"Dock"
-	"Finder"
-# 	"SystemUIServer"
-# 	"Mos"
-# 	"Xcode"
-# 	"Simulator"
-	)
-
-	echo "kill apps"
-	for app in "${apps[@]}"; do
-		killall "${app}" &> /dev/null
-	done
-fi
