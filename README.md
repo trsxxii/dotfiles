@@ -8,7 +8,7 @@ xcode-select --install
 
 2. download dotfiles
 ```
-cd ~/ && /bin/bash -c "$( curl -fsSL https://raw.githubusercontent.com/trsxxii/dotfiles/HEAD/bin/install.sh )"
+git clone https://github.com/trsxxii/dotfiles.git
 ```
 
 3. Restart Terminal.app && Install dotfiles
