@@ -40,9 +40,3 @@ SECRET_FILE=~/.secret.zshrc
 if [[ -f $SECRET_FILE ]]; then
   source $SECRET_FILE
 fi
-
-# dotfilesのgit更新漏れを表示
-if test -n '$(git -C ~/dotfiles status --porcelain)' ||
-   ! git -C ~/dotfiles diff --exit-code --stat --cached origin/main > /dev/null ; then
-  echo -e "\U1F363 \e[33mMy dotfiles have been changed.\e[m \U1F363"
-fi
