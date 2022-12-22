@@ -4,8 +4,9 @@ cd $(dirname $0)
 
 echo 'setup rbenv'
 export PATH=$HOME/.rbenv/bin:$PATH
-rbenv install '2.6.8'
-rbenv global '2.6.8'
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
+rbenv install '3.1.3'
+rbenv global '3.1.3'
 eval "$(~/.rbenv/bin/rbenv init)"
 
 echo 'bundle install'
