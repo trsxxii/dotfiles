@@ -20,9 +20,9 @@ vi config/.secret.zshrc
 
 5. Install Xcode with specific version
 ```
-xcversion update
-xcversion list
-xcversion install [YOUR VERSION]
+rbenv exec xcversion update
+rbenv exec xcversion list
+rbenv exec xcversion install [YOUR VERSION]
 ```
 
 6. Restart Mac and Finished
