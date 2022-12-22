@@ -1,5 +1,6 @@
 export LANG=ja_JP.UTF-8
 export PATH=/opt/homebrew/bin/:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
 
 eval "$(~/.rbenv/bin/rbenv init - zsh)"
 
