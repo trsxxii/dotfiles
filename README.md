@@ -28,14 +28,7 @@ git config --global user.email ""
 git config --global credential.helper osxkeychain
 ```
 
-5. Install Xcode with specific version
-```
-rbenv exec xcversion update
-rbenv exec xcversion list
-rbenv exec xcversion install [YOUR VERSION]
-```
-
-6. Restart Mac and Finished
+5. Restart Mac and Finished
 
 ---
 
