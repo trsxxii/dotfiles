@@ -39,3 +39,6 @@ SECRET_FILE=~/.secret.zshrc
 if [[ -f $SECRET_FILE ]]; then
   source $SECRET_FILE
 fi
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
