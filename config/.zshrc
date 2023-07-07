@@ -27,7 +27,7 @@ alias so='source'
 alias cp='cp -i'
 alias rm='rm -i'
 alias mkdir='mkdir -p'
-alias g='gitui'
+alias lg='lazygit'
 
 # ffmpegでgifを作るcommandを簡略化
 function gif() {
