@@ -31,7 +31,34 @@ alias lg='lazygit'
 
 # ffmpegでgifを作るcommandを簡略化
 function gif() {
-  command ffmpeg -hide_banner -i $1 -r 24 $1.gif
+  for file in "${@}";
+  do
+    echo -e "\e[32m===========================\e[m"
+    echo -e "\e[32mexec ffmpeg ${file}...\e[m"
+    echo -e "\e[32m===========================\e[m"
+    command ffmpeg -hide_banner -i ${file} -r 24 ${file}.gif
+  done
+}
+
+# PR番号でサクッとチェックアウト
+function pr() {
+  set -o pipefail
+
+  if [ $(git rev-parse --abbrev-ref HEAD) != "release" ]; then
+      # releaseブランチをチェックアウトしていない場合はチェックアウトする
+      git checkout release || { echo "releaseブランチをチェックアウトできませんでした"; exit 1; }
+  fi
+
+  git fetch --all
+
+  # PR-$1 ブランチが存在するか確認
+  if git show-ref --verify --quiet refs/heads/PR-$1; then
+      # PR-$1 ブランチが存在する場合は削除
+      git branch -D PR-$1
+  fi
+
+  git fetch origin pull/$1/head:PR-$1 &&
+  git switch PR-$1
 }
 
 # secretファイルを読み込む
